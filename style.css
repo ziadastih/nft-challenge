@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+/* ============roots=============== */
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --VeryDarkbluemainBG: hsl(217, 54%, 11%);
+  --VerydarkbluecardBG: hsl(216, 50%, 16%);
+  --Verydarkblueline: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --font: "Outfit", sans-serif;
+}
+/* =============global============ */
+body {
+  background-color: var(--VeryDarkbluemainBG);
+}
+h1 {
+  font-size: 24px;
+
+  font-family: var(--font);
+  color: var(--White);
+}
+p {
+  font-family: var(--font);
+  color: var(--Softblue);
+  font-size: 18px;
+}
+/* =========setting up the card in middle with bg and display flex with column and items in center and padding around with fixed estimated width */
+.container {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 13px;
+  transform: translate(-50%, -50%);
+  background-color: var(--VerydarkbluecardBG);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px;
+}
+/* ==========adjusting header and text ========= */
+.text {
+  padding-top: 20px;
+  cursor: pointer;
+}
+.text p {
+  padding-top: 20px;
+  line-height: 2rem;
+}
+/* =========adjusting the icons div======== */
+.icons {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Verydarkblueline);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.icons a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ethereum p {
+  color: var(--Cyan);
+}
+
+/* ==========setting up image sizing======== */
+.image img {
+  width: 300px;
+  border-radius: 12px;
+}
+/* ========setting the overlay icon===== */
+.overlay {
+  position: absolute;
+  text-align: center;
+  top: 25px;
+  opacity: 0;
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  background-color: var(--Cyan);
+}
+.overlay img {
+  width: 30px;
+  margin-top: 50%;
+}
+/* ===========adjusting profile and name==== */
+.profile a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 20px;
+  text-decoration: none;
+}
+.name {
+  color: var(--White);
+}
+.profile img {
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+/* =========setting hover effect for header and name */
+.name:hover {
+  color: var(--Cyan);
+  transition: 300ms;
+}
+.text h1:hover {
+  color: var(--Cyan);
+}
+.overlay:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
